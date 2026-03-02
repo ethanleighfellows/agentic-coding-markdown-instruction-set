@@ -25,3 +25,15 @@ This file acts as the Agent Progress Log, maintaining the state between sessions
 - **Task Management:** Organizes work into To-do, In Progress, Completed, and a prioritized Backlog.
 - **Issue & Decision Tracking:** Logs known defects and key architectural or implementation decisions.
 - **Session Resumption:** Provides explicit instructions for agents on how to start a new session (e.g., read guidelines, read napkin, triage).
+
+### 4. `Theorist.md` & `THEORY.md`
+The Theorist skill ensures the creation and maintenance of `THEORY.md`, a living essay that captures the operating theory of the work being done. It differs from a log or task list by focusing on the narrative, strategy, and mental models guiding the project:
+- **Purpose:** Acts as a cohesive narrative document explaining the problem thesis, operating theory, systematic strategy, and key discoveries.
+- **Session Behavior:** Instructs agents to read `THEORY.md` at the start of a session and only create it once enough context exists to form a meaningful narrative.
+- **Continuous Updates:** Requires frequent rewrites (not appends) after major work loops, ensuring the theory adapts to shifting understanding or discoveries.
+
+### 5. `Start.md`
+This file acts as the Agent Initialization & Workflow Protocol. It establishes the rigid, chronological sequence AI agents must follow when starting a work session to guarantee all instructions are properly loaded:
+- **Phase 1: Context Loading:** Mandates that the agent silently reads `Guidelines.md`, `Napkin.md`, and `Theorist.md` before taking any action.
+- **Phase 2: State Alignment:** Directs the agent to review `Progress.md` to identify the most critical next steps and overarching project status.
+- **Phase 3: Execution Commences:** Authorizes the agent to begin the first listed task, emphasizing the continuous need to update the theory and runbook documents as work progresses.
